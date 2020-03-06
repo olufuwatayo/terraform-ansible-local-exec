@@ -1,0 +1,14 @@
+---
+
+- name: Install Lamp Server
+  gather_facts: false
+  become: True
+  become_user: root
+  become_method: sudo
+  hosts: all
+  tasks:
+    - name: Install Lamp Server
+      apt:
+        name: nginx
+        state: present
+
